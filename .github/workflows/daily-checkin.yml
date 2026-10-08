@@ -47,11 +47,15 @@ jobs:
           URL="https://${UID_NUM}.push.ft07.com/send/${SENDKEY}.send"
 
           if [ "$STATUS" = "success" ]; then
-            TITLE="禁漫签到成功"
+            TITLE="【禁漫每日签到】"
+            STATUS_CN="成功"
           else
-            TITLE="禁漫签到失败"
+            TITLE="【禁漫每日签到】"
+            STATUS_CN="失败"
           fi
+
+          DESP=$(printf '状态: %s\n仓库: %s\n日志: %s' "$STATUS_CN" "${{ github.repository }}" "$RUN_URL")
 
           curl -sS -X POST "$URL" \
             --data-urlencode "title=${TITLE}" \
-            --data-urlencode "desp=状态: ${STATUS} | 仓库: ${{ github.repository }} | 日志: ${RUN_URL}"
+            --data-urlencode "desp=${DESP}"
