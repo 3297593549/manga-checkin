@@ -54,7 +54,7 @@ jobs:
             STATUS_CN="失败"
           fi
 
-          DESP=$(printf '状态: %s\n仓库: %s\n日志: %s' "$STATUS_CN" "${{ github.repository }}" "$RUN_URL")
+          DESP=$(printf '状态: %s\n\n仓库: %s\n\n日志: %s' "$STATUS_CN" "${{ github.repository }}" "$RUN_URL")
 
           curl -sS -X POST "$URL" \
             --data-urlencode "title=${TITLE}" \
