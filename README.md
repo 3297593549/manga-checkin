@@ -27,7 +27,7 @@
    - 哔咔漫画：每天 **08:00**
 5. 也可以手动触发：进入 Actions 页面 → 选择对应工作流 → 点击 **Run workflow**
 
-##Server酱³通知配置
+## Server酱³通知配置
 
 依次点击Settings → Secrets and variables → Actions
 添加Secrets，SERVERCHAN_SENDKEY = 你的SendKey
