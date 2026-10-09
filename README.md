@@ -29,5 +29,5 @@
 
 ## Server酱³通知配置
 
-1. 依次点击Settings → Secrets and variables → Actions
+1. **Settings** → **Secrets and variables** → **Actions**
 2. 添加Secrets，SERVERCHAN_SENDKEY = 你的SendKey
